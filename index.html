@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- ============ SEO ============ -->
+  <title id="pageTitle">CV</title>
+  <meta name="description" id="metaDescription" content="Professional CV / Resume">
+  <meta name="author" id="metaAuthor" content="">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" id="themeColor" content="#0f172a">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- ============ Open Graph /participation in link previews ============ -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" id="ogTitle" content="CV">
+  <meta property="og:description" id="ogDesc" content="Professional CV / Resume">
+  <meta property="og:site_name" content="CV">
+  <meta property="og:locale" id="ogLocale" content="en_US">
+  <meta property="og:locale:alternate" id="ogLocaleAlt" content="ar_EG">
+  <meta property="og:image" id="ogImage" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="CV">
+  <meta name="twitter:description" id="twDesc" content="Professional CV / Resume">
+
+  <!-- ============ Favicon (inline, no extra file, no 404) ============ -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='44' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='bold' fill='%23b8860b' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
+
+  <!-- ============ الخطوط ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ============ البيانات (في head لأنها لا تحتاج DOM) ============ -->
+  <script src="data.js"></script>
+
+  <!-- ============ تهيئة قبل أول رسم: يمنع وميض الصفحة بالوضع الخاطئ ============ -->
+  <script>
+    (function () {
+      var s = (cvData && cvData.settings) || {};
+      var saved = {};
+      try { saved = JSON.parse(localStorage.getItem('cv:prefs') || '{}'); } catch (e) {}
+
+      var lang   = saved.lang   || s.defaultLang   || 'ar';
+      var theme  = saved.theme  || s.defaultTheme || 'dark';
+      var ats    = (saved.ats !== undefined) ? saved.ats : !!s.defaultAts;
+      var accent = saved.accent || s.accentColor || '#b8860b';
+
+      var html = document.documentElement;
+      html.setAttribute('lang', lang === 'ar' ? 'ar' : 'en');
+      html.setAttribute('dir',  lang === 'ar' ? 'rtl' : 'ltr');
+      html.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
+      html.style.setProperty('--accent', accent);
+
+      window.__CV_BOOT__ = { lang: lang, theme: theme, ats: ats, accent: accent };
+    })();
+  </script>
+
+  <!-- ============ بيانات منظمة Schema.org (JSON-LD) — الأقوى لمحركات البحث ============ -->
+  <script type="application/ld+json" id="jsonLd"></script>
+</head>
+
+<body>
+
+<!-- ============================================================
+     شريط الأدوات (Tools bar) — لا يُطبع ولا يظهر في وضع ATS
+     ============================================================ -->
+<header class="toolbar" id="toolbar">
+  <div class="toolbar-brand" id="brandText">CV</div>
+
+  <div class="toolbar-actions">
+
+    <button class="btn btn-primary" id="printBtn" onclick="printCV()" title="Print / Save as PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      <span data-i18n="print">Print / PDF</span>
+    </button>
+
+    <button class="btn btn-secondary" id="imageBtn" onclick="showImageMenu(this)" title="Save as PNG / JPG image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <polyline points="21 15 16 10 5 21"/>
+      </svg>
+      <span data-i18n="image">Image</span>
+    </button>
+
+    <button class="btn btn-secondary" id="atsBtn" onclick="toggleAts()" title="ATS Mode (اضغط مرة أخرى للعودة)"
+            aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M9 12l2 2 4-4"/>
+        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+      </svg>
+      <span data-i18n="ats">ATS</span>
+      <span class="ats-dot" id="atsDot" aria-hidden="true"></span>
+    </button>
+
+    <button class="btn btn-secondary" id="langBtn" onclick="toggleLang()" title="العربية / English">
+      <span id="langLabel">ع</span>
+    </button>
+
+    <button class="btn btn-secondary icon-only" id="themeBtn" onclick="toggleTheme()" title="Dark / Light" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="ico-moon">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="ico-sun">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+
+    <button class="btn btn-secondary icon-only" id="editBtn" onclick="toggleEditor()" title="Edit CV data">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+        <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+      </svg>
+    </button>
+
+    <button class="btn btn-secondary" id="shareBtn" onclick="shareCV()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+      <span data-i18n="share">Share</span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ============================================================
+     السيرة الذاتية
+     ترتيب الـ DOM هنا مقصود: العمود الأساسي أولاً ثم الجانبي،
+     لأن محلات ATS تقرأ النص بترتيب الوثيقة.
+     ============================================================ -->
+<!-- حالة ATS: الشريط العلوي + زر العودة للوضع العادي (يختفيان تماماً عند الطباعة) -->
+<div class="ats-banner" id="atsBanner" role="status" hidden>
+  <span class="ats-banner-text" id="atsBannerText"></span>
+  <button type="button" class="ats-exit" id="atsExit" onclick="setAts(false)">
+    <span id="atsExitLabel">العودة للوضع العادي</span>
+  </button>
+</div>
+
+<main class="cv-wrapper">
+  <article class="cv-paper" id="cvPaper"
+           itemscope itemtype="https://schema.org/Person"
+           aria-labelledby="cvName">
+
+    <!-- ---------- الترويسة ---------- -->
+    <header class="cv-header" id="cvHeader">
+      <div class="cv-photo" id="photoEl" itemscope itemtype="https://schema.org/ImageObject" hidden></div>
+      <div class="cv-header-info">
+        <h1 class="cv-name" id="cvName" itemprop="name"></h1>
+        <p class="cv-job-title" id="cvTitle" itemprop="jobTitle"></p>
+        <address class="cv-contacts" id="cvContacts"></address>
+      </div>
+    </header>
+
+    <div class="cv-body" id="cvBody">
+
+      <!-- ============ العمود الأساسي ============ -->
+      <div class="cv-main" id="cvMain">
+
+        <section class="cv-section" id="sec-summary" aria-labelledby="t-summary">
+          <h2 class="section-title" id="t-summary"><span data-i18n="summary">Professional Summary</span></h2>
+          <p class="cv-summary" id="cvSummary" itemprop="description"></p>
+        </section>
+
+        <section class="cv-section" id="sec-experience" aria-labelledby="t-experience">
+          <h2 class="section-title" id="t-experience"><span data-i18n="experience">Work Experience</span></h2>
+          <div id="experienceList"></div>
+        </section>
+
+        <section class="cv-section" id="sec-education" aria-labelledby="t-education">
+          <h2 class="section-title" id="t-education"><span data-i18n="education">Education</span></h2>
+          <div id="educationList"></div>
+        </section>
+
+        <section class="cv-section" id="sec-projects" aria-labelledby="t-projects">
+          <h2 class="section-title" id="t-projects"><span data-i18n="projects">Projects</span></h2>
+          <div id="projectsList"></div>
+        </section>
+
+        <section class="cv-section" id="sec-achievements" aria-labelledby="t-achievements">
+          <h2 class="section-title" id="t-achievements"><span data-i18n="achievements">Achievements &amp; Awards</span></h2>
+          <div id="achievementsList"></div>
+        </section>
+
+      </div><!-- /.cv-main -->
+
+      <!-- ============ العمود الجانبي (بصرياً على اليمين في RTL) ============ -->
+      <aside class="cv-sidebar" id="cvSidebar" aria-label="Skills & Certifications">
+
+        <section class="cv-section" id="sec-skills" aria-labelledby="t-skills">
+          <h2 class="section-title" id="t-skills"><span data-i18n="skills">Technical Skills</span></h2>
+          <div id="technicalSkills"></div>
+        </section>
+
+        <section class="cv-section" id="sec-soft" aria-labelledby="t-soft">
+          <h2 class="section-title" id="t-soft"><span data-i18n="soft">Soft Skills</span></h2>
+          <div class="tags-wrap" id="softSkills"></div>
+        </section>
+
+        <section class="cv-section" id="sec-langs" aria-labelledby="t-langs">
+          <h2 class="section-title" id="t-langs"><span data-i18n="langs">Languages</span></h2>
+          <div id="languageSkills"></div>
+        </section>
+
+        <section class="cv-section" id="sec-certs" aria-labelledby="t-certs">
+          <h2 class="section-title" id="t-certs"><span data-i18n="certs">Certifications</span></h2>
+          <div id="certificationsList"></div>
+        </section>
+
+      </aside><!-- /.cv-sidebar -->
+
+    </div><!-- /.cv-body -->
+  </article>
+
+  <footer class="page-foot" id="pageFoot" aria-hidden="true"></footer>
+</main>
+
+<!-- نافذة التنبيه -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- لوح تحرير البيانات -->
+<aside class="editor" id="editor" hidden aria-label="CV Editor"></aside>
+<div class="editor-backdrop" id="editorBackdrop" hidden></div>
+
+<noscript>
+  <div class="noscript">
+    <h1>JavaScript required · مطلوب تفعيل الجافاسكربت</h1>
+    <p>هذه السيرة تُبنى ديناميكياً من ملف <code>data.js</code>. الرجاء تفعيل JavaScript لعرضها.</p>
+    <p>This CV is rendered from <code>data.js</code>. Please enable JavaScript.</p>
+  </div>
+</noscript>
+
+<script src="app.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>
