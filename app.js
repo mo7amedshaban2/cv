@@ -41,7 +41,7 @@
       imgDone: 'تم إنشاء الصورة وحفظها',
       imgFail: 'تعذّر إنشاء الصورة — جرّب من Chrome أو Edge',
       langToast: 'English', menuPng: 'حفظ PNG', menuJpg: 'حفظ JPG',
-      menuCopy: 'نسخ الصورة', menuCancel: 'إلغاء'
+      menuCopy: 'نسخ الصورة', menuCancel: 'إلغاء', whatsapp: 'واتساب'
     },
     en: {
       brand: 'Résumé', print: 'Print / PDF', image: 'Image', ats: 'ATS',
@@ -56,7 +56,7 @@
       imgDone: 'Image created and downloaded',
       imgFail: 'Could not create the image — try Chrome or Edge',
       langToast: 'العربية', menuPng: 'Save PNG', menuJpg: 'Save JPG',
-      menuCopy: 'Copy image', menuCancel: 'Cancel'
+      menuCopy: 'Copy image', menuCancel: 'Cancel', whatsapp: 'WhatsApp'
     }
   };
 
@@ -821,6 +821,16 @@
     }
   }
 
+  function shareWhatsApp() {
+    var d = getData();
+    var name = bi(d.personal || {}, 'name') || 'CV';
+    var title = bi(d.personal || {}, 'title') || '';
+    var url = location.href;
+    var text = '👋 ' + name + (title ? ' — ' + title : '') + '\n\n' + url;
+    var waUrl = 'https://wa.me/?text=' + encodeURIComponent(text);
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+  }
+
   function copyText(txt) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       return navigator.clipboard.writeText(txt);
@@ -992,6 +1002,7 @@
     return buildSVG(collectCSS(), Math.ceil(paper.getBoundingClientRect().width), Math.ceil(paper.scrollHeight));
   };
   window.shareCV      = shareCV;
+  window.shareWhatsApp = shareWhatsApp;
   window.showToast    = showToast;
   window.cvRerender   = render;
 

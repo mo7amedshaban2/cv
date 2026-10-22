@@ -187,6 +187,14 @@ address { font-style: normal; }   /* القرص: والعنصر address يأتي
 .btn-secondary { background: var(--surface2); border-color: var(--border); }
 .btn-secondary:hover { background: var(--border); }
 
+.btn-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+.btn-whatsapp:hover { background: #1ebe5d; border-color: #1ebe5d; color: #fff; }
+.btn-whatsapp svg { fill: #fff; width: 15px; height: 15px; }
+
 .btn.icon-only { padding: 7px 9px; }
 .btn.icon-only svg { width: 16px; height: 16px; }
 

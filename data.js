@@ -16,16 +16,16 @@ const cvData = {
   personal: {
     nameAr:    "محمد شبانة",
     nameEn:    "Mohamed Shabana",
-    titleAr:   "خريج نظم المعلومات الإدارية · دعم تقني ومبيعات",
-    titleEn:   "MIS Graduate · Technical Support & Sales Specialist",
+    titleAr:   "أخصائي مبيعات · دعم تقني · خدمة عملاء",
+    titleEn:   "Sales & Technical Support Specialist | Customer Service",
     email:     "mo7amedshaban2@gmail.com",
     phone:     "+20 101 577 3465",
     location:  "Mansoura, Dakahlia, Egypt",
-    linkedin:  "https://linkedin.com/in/mo7amsedshaban2",
+    linkedin:  "https://linkedin.com/in/mo7amedshaban2",
     github:    "",
     website:   "",
-    summaryAr: "خريج نظم المعلومات الإدارية بخبرة عملية في الدعم التقني وعمليات المبيعات وأنظمة الأمن والخدمة وأتمتة العمليات. متخصص في تقديم الاستشارات التقنية وحل مشكلات الأجهزة والبرامج ودعم العملاء وتطوير حلول Excel لتحسين الكفاءة التشغيلية. أتممت الخدمة العسكرية كاتب عمليات بخبرة في العمليات الإدارية والدعم التقني وإدارة مكاتب الأنظمة.",
-    summaryEn: "MIS graduate with hands-on experience in Technical Support, Sales Operations, Security Systems, Customer Service, and Process Automation. Skilled in providing technical consultations, troubleshooting hardware and software issues, supporting customers, and developing Excel-based solutions that improve operational efficiency and workflow management. Completed military service as an Operations Clerk with experience in administrative operations, technical support, Excel automation, and office systems management.",
+    summaryAr: "أخصائي مبيعات ودعم تقني وخدمة عملاء بخبرة أكثر من سنتين في شركة Eagle Eye لأنظمة الأمن، مع خلفية أكاديمية في نظم المعلومات الإدارية. أجيد تحويل الاستفسارات إلى صفقات مغلقة من خلال الاستشارات التقنية الاحترافية، وبناء علاقات طويلة المدى مع العملاء، وإدارة ما بعد البيع بكفاءة. طوّرت أنظمة أتمتة بـ Excel وGoogle Sheets حسّنت الكفاءة التشغيلية للفريق بشكل ملموس. أعمل بكفاءة أعلى في بيئات منظمة ذات أهداف وأنظمة واضحة — فلسفة عمل تدفعني دائماً لإنتاج تحسينات حقيقية في أداء الفريق، بما يتوافق تماماً مع سياسات المؤسسة وثقافتها وقيمها.",
+    summaryEn: "Sales, Technical Support & Customer Service Specialist with 2+ years at Eagle Eye Security Systems and an MIS academic background. Proven ability to convert inquiries into closed deals through professional technical consultations, build long-term client relationships, and efficiently manage after-sales support. Developed Excel and Google Sheets automation tools that measurably improved team productivity. Performs best in structured environments with clear goals and defined systems — a work philosophy that consistently drives meaningful improvements to team operations, always in alignment with organizational policies, culture, and values.",
     photo:     ""
   },
 
@@ -37,8 +37,8 @@ const cvData = {
    * ======================================================================= */
   experience: [
     {
-      titleAr:    "أخصائي دعم تقني ومبيعات",
-      titleEn:    "Technical Support & Sales Specialist",
+      titleAr:    "أخصائي مبيعات ودعم تقني وخدمة عملاء",
+      titleEn:    "Sales & Technical Support Specialist | Customer Service",
       companyAr:  "Eagle Eye For Security Systems",
       companyEn:  "Eagle Eye For Security Systems",
       locationAr: "المنصورة، مصر",
@@ -48,23 +48,31 @@ const cvData = {
       currentAr:  "",
       currentEn:  "",
       descriptionAr: [
-        "تقديم استشارات تقنية وتوصيات منتجات لأنظمة الأمن والمراقبة",
-        "تشخيص وحل المشكلات المتعلقة بالمنتجات وإدارة استفسارات العملاء بعد البيع",
-        "تطوير أنظمة أتمتة بـ Excel وGoogle Sheets لتحسين تتبع الصيانة وإدارة الأسعار ومراقبة المخزون والكفاءة التشغيلية",
-        "إنشاء وصيانة وصف المنتجات والمواصفات ومواد المبيعات"
+        "إدارة دورة المبيعات الكاملة لأنظمة الأمن والمراقبة (CCTV وكاميرات IP وأنظمة إنذار) من استقبال العميل المحتمل حتى إغلاق الصفقة وما بعدها",
+        "تقديم استشارات تقنية احترافية تساعد العملاء على اختيار أنسب منتجات الأمن وفق احتياجاتهم وميزانياتهم — مما أسهم في رفع معدل تحويل الاستفسارات إلى مبيعات",
+        "إدارة علاقات العملاء ومتابعة ما بعد البيع وحل المشكلات التقنية بسرعة للحفاظ على مستوى رضا مرتفع",
+        "استقبال وتصنيف وتصعيد طلبات الدعم الفني وشكاوى العملاء وضمان حلها في أسرع وقت ممكن",
+        "تشخيص الأعطال الميدانية والبرمجية لأنظمة CCTV وDVR/NVR وكاميرات الشبكة وتقديم الدعم للفنيين في الموقع",
+        "تطوير نظام Excel لتتبع الصيانة مع تعريف QR لكل جهاز — قلّص وقت البحث عن سجلات الأعطال بشكل ملحوظ",
+        "بناء نظام تسعير ديناميكي على Google Sheets يعرض توافر المنتجات والأسعار في الوقت الفعلي — رفع إنتاجية فريق المبيعات وقلّل أخطاء التسعير",
+        "إعداد وصيانة كتالوجات المنتجات والمواصفات التقنية وعروض الأسعار ومستندات ما بعد البيع"
       ],
       descriptionEn: [
-        "Provided technical consultations and product recommendations for security and surveillance systems",
-        "Troubleshot and resolved product-related issues; managed after-sales customer inquiries",
-        "Developed Excel & Google Sheets automation systems improving maintenance tracking, pricing management, inventory visibility, and operational efficiency",
-        "Created and maintained product descriptions, specifications, and sales materials"
+        "Managed the full sales cycle for security and surveillance solutions (CCTV, IP cameras, alarm systems) from lead qualification through deal closure and post-sale follow-up",
+        "Delivered professional technical consultations helping clients select the right security products based on their needs and budgets — contributing to improved inquiry-to-sale conversion rates",
+        "Maintained strong customer relationships through proactive after-sales support and rapid technical issue resolution to sustain high customer satisfaction levels",
+        "Received, categorized, and escalated technical support requests and customer complaints to ensure timely resolution and high first-contact resolution rates",
+        "Diagnosed field and software faults for CCTV systems, DVR/NVR units, and network cameras; provided remote and on-site guidance to field technicians",
+        "Built an Excel-based maintenance tracking system with QR code device identification — significantly reduced time to retrieve fault history and service records",
+        "Developed a dynamic pricing system on Google Sheets displaying real-time product availability and prices — boosted sales team productivity and reduced pricing errors",
+        "Prepared and maintained product catalogs, technical specifications, quotations, and after-sales documentation"
       ]
     },
     {
-      titleAr:    "كاتب عمليات",
-      titleEn:    "Operations Clerk",
-      companyAr:  "القوات المسلحة المصرية — الخدمة العسكرية",
-      companyEn:  "Egyptian Armed Forces · Military Service",
+      titleAr:    "متخصص منظومة عمليات",
+      titleEn:    "Operations Systems Specialist",
+      companyAr:  "القوات المسلحة المصرية — الخدمة العسكرية الإلزامية",
+      companyEn:  "Egyptian Armed Forces · Mandatory Military Service",
       locationAr: "مصر",
       locationEn: "Egypt",
       startDate:  "2025-04",
@@ -72,14 +80,20 @@ const cvData = {
       currentAr:  "",
       currentEn:  "",
       descriptionAr: [
-        "إدارة التوثيق الإداري والعمليات باستخدام MS Word وExcel وPowerPoint",
-        "تقديم الدعم التقني لأجهزة الحاسوب والطابعات ومشكلات البرامج",
-        "المساعدة في تثبيت Windows وإعداد البرامج وإصلاح أعطال التعريفات"
+        "استلام وتصنيف التعليمات والبلاغات التشغيلية الواردة (فكسات وأوامر) وتحليلها وتحويلها إلى إجراءات تنفيذية بدقة وسرعة",
+        "تنفيذ المهام التشغيلية المطلوبة وفق الأوامر الصادرة بالأولويات الصحيحة وضمان الالتزام بالمواعيد",
+        "إعداد وتقديم تقارير العمليات اليومية والدورية للقيادة بأسلوب واضح ومنظم",
+        "إدارة وأرشفة الوثائق والسجلات التشغيلية الرسمية بأعلى درجات الدقة والسرية",
+        "تشغيل وصيانة الأجهزة المكتبية وأجهزة الحاسوب والطابعات وضمان استمرارية العمل التقني",
+        "التنسيق بين الوحدات المختلفة ونقل المعلومات التشغيلية بدقة وفي الوقت المناسب"
       ],
       descriptionEn: [
-        "Managed administrative and operational documentation using MS Word, Excel, and PowerPoint",
-        "Provided technical support for office computers, printers, and software issues",
-        "Assisted with Windows installation, software setup, and driver troubleshooting"
+        "Received, classified, and analyzed incoming operational directives and communications; translated them into precise executable actions with speed and accuracy",
+        "Executed required operational tasks according to issued orders with correct prioritization and strict deadline compliance",
+        "Prepared and submitted daily and periodic operational reports to command leadership in a clear and well-structured format",
+        "Managed and archived official operational documents and records with the highest standards of accuracy and confidentiality",
+        "Operated and maintained office computers, printers, and technical equipment to ensure continuous operational readiness",
+        "Coordinated between units and transmitted operational information accurately and on time"
       ]
     }
   ],
@@ -122,26 +136,31 @@ const cvData = {
    * ======================================================================= */
   skills: {
     technical: [
-      { nameAr: "Microsoft Excel & Automation", nameEn: "Microsoft Excel & Automation", level: 95 },
-      { nameAr: "Google Sheets",                nameEn: "Google Sheets",                level: 90 },
-      { nameAr: "الدعم التقني / Hardware & Software", nameEn: "Technical Support / Hardware & Software", level: 88 },
-      { nameAr: "Windows OS / تثبيت وصيانة",   nameEn: "Windows OS / Installation & Maintenance", level: 85 },
-      { nameAr: "QR Code Systems",              nameEn: "QR Code Systems",              level: 80 },
-      { nameAr: "HTML / CSS",                   nameEn: "HTML / CSS",                   level: 75 },
-      { nameAr: "VBA / Macros",                 nameEn: "VBA / Macros",                 level: 70 },
-      { nameAr: "Laravel / MySQL",              nameEn: "Laravel / MySQL",              level: 65 }
+      { nameAr: "Microsoft Excel & Automation",         nameEn: "Microsoft Excel & Automation",         level: 95 },
+      { nameAr: "Google Sheets & Dashboards",           nameEn: "Google Sheets & Dashboards",           level: 90 },
+      { nameAr: "الدعم التقني — Hardware & Software",   nameEn: "Technical Support — Hardware & Software", level: 88 },
+      { nameAr: "إدارة علاقات العملاء (CRM)",           nameEn: "CRM & Customer Relationship Management", level: 85 },
+      { nameAr: "Windows OS — تثبيت وصيانة",           nameEn: "Windows OS — Installation & Maintenance", level: 85 },
+      { nameAr: "أنظمة CCTV وDVR/NVR",                 nameEn: "CCTV / DVR / NVR Security Systems",    level: 82 },
+      { nameAr: "إدارة المبيعات ودورة البيع",           nameEn: "Sales Cycle & Pipeline Management",    level: 80 },
+      { nameAr: "VBA / Macros",                         nameEn: "VBA / Macros",                         level: 75 },
+      { nameAr: "HTML / CSS",                           nameEn: "HTML / CSS",                           level: 72 },
+      { nameAr: "Laravel / MySQL",                      nameEn: "Laravel / MySQL",                      level: 65 }
     ],
     soft: [
-      { nameAr: "قيادة الفريق",     nameEn: "Team Leadership"   },
-      { nameAr: "حل المشكلات",      nameEn: "Problem Solving"   },
-      { nameAr: "خدمة العملاء",     nameEn: "Customer Service"  },
-      { nameAr: "التواصل الفعّال",  nameEn: "Communication"     },
-      { nameAr: "إدارة الوقت",      nameEn: "Time Management"   },
-      { nameAr: "الدقة في التوثيق", nameEn: "Documentation"     }
+      { nameAr: "خدمة العملاء",            nameEn: "Customer Service"        },
+      { nameAr: "إغلاق الصفقات",           nameEn: "Deal Closing"            },
+      { nameAr: "التفاوض والإقناع",         nameEn: "Negotiation & Persuasion"},
+      { nameAr: "حل المشكلات",             nameEn: "Problem Solving"         },
+      { nameAr: "التواصل الفعّال",          nameEn: "Effective Communication" },
+      { nameAr: "قيادة الفريق",            nameEn: "Team Leadership"         },
+      { nameAr: "إدارة الوقت والأولويات",  nameEn: "Time & Priority Management"},
+      { nameAr: "الدقة في التوثيق",        nameEn: "Accurate Documentation"  },
+      { nameAr: "العمل تحت الضغط",         nameEn: "Working Under Pressure"  }
     ],
     languages: [
-      { nameAr: "العربية",    nameEn: "Arabic",  levelAr: "لغة أم",  levelEn: "Native"  },
-      { nameAr: "الإنجليزية", nameEn: "English", levelAr: "A2 — أساسي", levelEn: "A2 — Basic" }
+      { nameAr: "العربية",    nameEn: "Arabic",  levelAr: "لغة أم",      levelEn: "Native"   },
+      { nameAr: "الإنجليزية", nameEn: "English", levelAr: "A2 — أساسي",  levelEn: "A2 — Basic" }
     ]
   },
 
@@ -180,8 +199,8 @@ const cvData = {
     {
       nameAr:        "نظام إدارة الإجازات الآلي",
       nameEn:        "Automated Leave Management System",
-      descriptionAr: "نظام Excel يؤتمت تتبع الموظفين وحساب استحقاق الإجازات — قلّل العبء اليدوي وحسّن الدقة الإدارية وعزّز الشفافية في إدارة الإجازات.",
-      descriptionEn: "Excel-based system automating personnel tracking and leave eligibility calculations. Reduced manual workload and improved administrative accuracy. Enhanced transparency in leave management processes.",
+      descriptionAr: "نظام Excel طوّرته بمبادرة شخصية خلال الخدمة العسكرية لحل مشكلة حقيقية كانت تُدار يدوياً. يتتبع بيانات الأفراد وأرصدة الإجازات ويحسب الاستحقاق تلقائياً — قلّص الأخطاء الإدارية وحسّن الشفافية ووفّر وقت المعالجة اليدوية.",
+      descriptionEn: "Excel system developed as a personal initiative during military service to automate a manual leave-tracking process. Tracks personnel records, calculates leave entitlements, and monitors balances automatically — reduced administrative errors, improved transparency, and saved significant manual processing time.",
       tech: ["Microsoft Excel", "VBA", "Data Validation", "Process Automation"],
       link: "",
       demo: ""
@@ -207,31 +226,31 @@ const cvData = {
    * ======================================================================= */
   achievements: [
     {
-      titleAr:       "قائد فريق مشروع التخرج — المركز الثاني",
-      titleEn:       "Graduation Project Team Leader — Ranked 2nd Place",
-      descriptionAr: "قاد الفريق في مشروع Pocket لإدارة المالية الشخصية وحصل على المركز الثاني مع تقدير رسمي.",
-      descriptionEn: "Led the team in Pocket personal finance project, ranked 2nd with official recognition for excellence.",
-      date: "2024"
+      titleAr:       "تطوير أنظمة أتمتة فعلية في بيئة إنتاج حقيقية",
+      titleEn:       "Built & Deployed Real-World Automation Systems in Production",
+      descriptionAr: "طوّرت أنظمة Excel وGoogle Sheets نشطة داخل الشركة لتتبع الصيانة وإدارة التسعير وإدارة الإجازات — أسهمت في تحسين ملموس في إنتاجية الفريق وتقليص الأخطاء اليدوية.",
+      descriptionEn: "Built and deployed Excel and Google Sheets systems actively used in production for maintenance tracking, pricing management, and leave administration — measurably improved team productivity and reduced manual errors.",
+      date: "2023"
     },
     {
-      titleAr:       "بناء أنظمة أتمتة Excel وSheets في بيئة إنتاج حقيقية",
-      titleEn:       "Built Production-Used Excel & Sheets Automation Systems",
-      descriptionAr: "طوّر حلول أتمتة حقيقية نشطة في الشركة وأسهمت في تحسين العمليات فعلياً.",
-      descriptionEn: "Developed real automation solutions actively used in production, improving operational workflows.",
-      date: "2023"
+      titleAr:       "قائد فريق مشروع التخرج — المركز الثاني",
+      titleEn:       "Graduation Project Team Leader — Ranked 2nd Place",
+      descriptionAr: "قدت فريق تطوير منصة Pocket لإدارة المالية الشخصية وحققت المركز الثاني مع تقدير رسمي للتميز الأكاديمي.",
+      descriptionEn: "Led the development team for Pocket, a personal finance management platform; ranked 2nd place with an official recognition certificate for academic excellence.",
+      date: "2024"
     },
     {
       titleAr:       "الرابع أكاديمياً في السنتين الأولى والثانية",
       titleEn:       "Top Academic Performance — Ranked 4th in 1st & 2nd Years",
-      descriptionAr: "حصل على المركز الرابع أكاديمياً في السنة الأولى والثانية مع شهادة تقدير رسمية.",
-      descriptionEn: "Ranked 4th academically in 1st & 2nd years with official recognition certificate.",
+      descriptionAr: "حققت المركز الرابع أكاديمياً في السنة الأولى والثانية مع شهادة تقدير رسمية من الجهة الأكاديمية.",
+      descriptionEn: "Ranked 4th academically in the 1st and 2nd years with an official recognition certificate.",
       date: "2021"
     },
     {
-      titleAr:       "تحسين عمليات الصيانة والتسعير والعمليات",
-      titleEn:       "Improved Maintenance, Pricing & Operational Workflows",
-      descriptionAr: "أسهمت الأنظمة المطوّرة في تحسين ملموس في كفاءة العمليات اليومية للشركة.",
-      descriptionEn: "Developed systems that measurably improved daily company operations efficiency.",
+      titleAr:       "إدارة دورة مبيعات كاملة في سوق أنظمة الأمن التنافسي",
+      titleEn:       "Managed Full Sales Cycle in a Competitive Security Systems Market",
+      descriptionAr: "اكتسبت خبرة شاملة في استقبال العملاء المحتملين وتقديم الاستشارات التقنية وإغلاق الصفقات وإدارة ما بعد البيع في سوق تقني تنافسي.",
+      descriptionEn: "Acquired end-to-end experience in lead handling, technical consultations, deal closing, and after-sales management within a competitive technical market.",
       date: "2024"
     }
   ],
